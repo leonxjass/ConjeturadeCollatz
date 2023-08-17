@@ -1,0 +1,93 @@
+public class CollatzConjecture {
+    
+    public static int CollatzMechanism(int n) {
+        /**
+         * This is the famous mathematical puzzle where if a number is even
+         * we divide it, and if it's odd, we apply the equation 3n+1, which will result in an even number.
+         * The cycle repeats until it reaches its minimum expression where 
+         * it loops: 1, 4, 2, 1, 4, 2, and so on, indefinitely.
+        */
+       
+        int stepsCount = 0;
+        
+        while (n != 1) {
+            if (n % 2 == 0)
+                n = n / 2;
+            else
+                n = n * 3 + 1;
+            stepsCount++;
+        }
+        return stepsCount;
+    }
+    
+    public static int numberWithMostSteps(int limit) {
+        int maxSteps = 0;
+        int numberWithMaxSteps = 0;
+        
+        for (int i = 1; i <= limit; i++) {
+            int steps = CollatzMechanism(i);
+            if (steps > maxSteps) {
+                maxSteps = steps;
+                numberWithMaxSteps = i;
+            }
+        }
+        return numberWithMaxSteps;
+    }
+    
+    public static void main(String[] args) {
+        
+        int limit = 1000;
+        int steps = CollatzMechanism(limit);
+        int number = numberWithMostSteps(limit);
+        
+        System.out.println("Number with the most steps between 0 to " + limit +
+                           ": " + number + " and took: " + steps + " steps");
+        
+    } 
+}public class CollatzConjecture {
+    
+    public static int CollatzMechanism(int n) {
+        /**
+         * This is the famous mathematical puzzle where if a number is even
+         * we divide it, and if it's odd, we apply the equation 3n+1, which will result in an even number.
+         * The cycle repeats until it reaches its minimum expression where 
+         * it loops: 1, 4, 2, 1, 4, 2, and so on, indefinitely.
+        */
+       
+        int stepsCount = 0;
+        
+        while (n != 1) {
+            if (n % 2 == 0)
+                n = n / 2;
+            else
+                n = n * 3 + 1;
+            stepsCount++;
+        }
+        return stepsCount;
+    }
+    
+    public static int numberWithMostSteps(int limit) {
+        int maxSteps = 0;
+        int numberWithMaxSteps = 0;
+        
+        for (int i = 1; i <= limit; i++) {
+            int steps = CollatzMechanism(i);
+            if (steps > maxSteps) {
+                maxSteps = steps;
+                numberWithMaxSteps = i;
+            }
+        }
+        return numberWithMaxSteps;
+    }
+    
+    public static void main(String[] args) {
+        
+        int limit = 1000;
+        int steps = CollatzMechanism(limit);
+        int number = numberWithMostSteps(limit);
+        
+        System.out.println("Number with the most steps between 0 to " + limit +
+                           ": " + number + " and took: " + steps + " steps");
+        
+    } 
+}
