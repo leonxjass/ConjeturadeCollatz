@@ -12,6 +12,6 @@ La conjetura sostiene que, sin importar el valor inicial de n, eventualmente lle
 
 /**
 * Problema de inicio para la informática: La conjetura se ha utilizado como un problema introductorio en la enseñanza de la       
-* programación y la ciencia de la computación. Puede ser un ejercicio útil para enseñar bucles, lógica y control de flujo en la 
-* programación.
+  programación y la ciencia de la computación. Puede ser un ejercicio útil para enseñar bucles, lógica y control de flujo en la 
+  programación.
 */
